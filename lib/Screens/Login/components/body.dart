@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:meta_ozce_0/Screens/Login/components/background.dart';
+import 'package:meta_ozce_0/Screens/QrCode/qrCode_screen.dart';
 import 'package:meta_ozce_0/components/rounded_button.dart';
+import 'package:meta_ozce_0/constants.dart';
 
 import '../../../components/rounded_input_field.dart';
 import '../../../components/rounded_password_field.dart';
@@ -20,15 +22,15 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "LOGIN",
+              " ",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Colors.indigo,
+                  color: kPrimaryColor,
                   fontSize: 15),
             ),
             Image.asset(
               urlImage,
-              height: size.height * 0.33,
+              height: size.height * 0.38,
             ),
             RoundedInputField(
               hintText: "Oda Numarası",
@@ -39,7 +41,16 @@ class Body extends StatelessWidget {
             ),
             RoundedButton(
               text: "GİRİŞ YAP",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return QrCodeScreen();
+                    },
+                  ),
+                );
+              },
             ),
             SizedBox(
               height: size.height * 0.008,
@@ -49,7 +60,7 @@ class Body extends StatelessWidget {
               children: <Widget>[
                 Text(
                   "Parolayı unuttuysanız resepsiyondan alabilirsiniz.",
-                  style: TextStyle(color: Colors.indigo, fontSize: 13),
+                  style: TextStyle(color: kPrimaryColor, fontSize: 13),
                 ),
               ],
             ),
@@ -62,7 +73,7 @@ class Body extends StatelessWidget {
                 Text(
                   "(RESEPSİYONU ARA)",
                   style: TextStyle(
-                      color: Colors.indigo,
+                      color: kPrimaryColor,
                       fontWeight: FontWeight.bold,
                       fontSize: 15),
                 ),
