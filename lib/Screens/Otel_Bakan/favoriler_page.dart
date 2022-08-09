@@ -168,12 +168,15 @@ class _FavPageState extends State<FavPage> {
                                                   iconSize: 45,
                                                   isFavorite: true,
                                                   // iconDisabledColor: Colors.white,
-                                                  valueChanged: (_isFavorite) {
+                                                  valueChanged:
+                                                      (_isFavorite) async {
                                                     _isFavorite
                                                         ? print(
                                                             'Is Favorite : $_isFavorite dogru1')
-                                                        : print(
-                                                            'Is Favorite : $_isFavorite yanlıs2');
+                                                        : await listofDocumentSnap[
+                                                                index]
+                                                            .reference
+                                                            .delete();
                                                   },
                                                 ),
                                               ),

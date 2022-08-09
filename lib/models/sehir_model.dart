@@ -24,6 +24,7 @@ List<Otel> antalya = [
     price: '30 TL',
     country: 'Türkiye',
     city: 'Antalya',
+    flag: false,
   ),
   Otel(
     imageUrl: 'assets/images/oteller/antalya2.png',
@@ -32,6 +33,7 @@ List<Otel> antalya = [
     price: '230 TL',
     country: 'Türkiye',
     city: 'Antalya',
+    flag: false,
   ),
   Otel(
     imageUrl: 'assets/images/oteller/antalya3.png',
@@ -40,6 +42,7 @@ List<Otel> antalya = [
     price: '125 TL',
     country: 'Türkiye',
     city: 'Antalya',
+    flag: false,
   ),
 ];
 List<Otel> mugla = [
@@ -50,6 +53,7 @@ List<Otel> mugla = [
     price: '305 TL',
     country: 'Türkiye',
     city: 'Muğla',
+    flag: false,
   ),
   Otel(
     imageUrl: 'assets/images/oteller/mugla2.png',
@@ -58,6 +62,7 @@ List<Otel> mugla = [
     price: '210 TL',
     country: 'Türkiye',
     city: 'Muğla',
+    flag: false,
   ),
   Otel(
     imageUrl: 'assets/images/oteller/mugla3.png',
@@ -66,6 +71,7 @@ List<Otel> mugla = [
     price: '125 TL',
     country: 'Türkiye',
     city: 'Muğla',
+    flag: false,
   ),
 ];
 List<Otel> izmir = [
@@ -76,6 +82,7 @@ List<Otel> izmir = [
     price: '390 TL',
     country: 'Türkiye',
     city: 'İzmir',
+    flag: false,
   ),
   Otel(
     imageUrl: 'assets/images/oteller/izmir1.png',
@@ -84,6 +91,7 @@ List<Otel> izmir = [
     price: '230 TL',
     country: 'Türkiye',
     city: 'İzmir',
+    flag: false,
   ),
   Otel(
     imageUrl: 'assets/images/oteller/izmir1.png',
@@ -92,6 +100,7 @@ List<Otel> izmir = [
     price: '230 TL',
     country: 'Türkiye',
     city: 'İzmir',
+    flag: false,
   ),
 ];
 

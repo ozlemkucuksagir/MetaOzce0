@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_ozce_0/Screens/Otel_Bakan/favoriler_page.dart';
+import 'package:meta_ozce_0/Screens/Otel_Bakan/otel_detail_page.dart';
 import 'package:meta_ozce_0/Screens/Otel_Konaklayan/feedback_page.dart';
 import 'package:meta_ozce_0/Screens/Welcome/welcome_screen.dart';
 import 'package:meta_ozce_0/constants.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
                 child: Text('beklenmeyen hata'),
               );
             } else if (asyncSnapshot.hasData) {
-              return FavPage();
+              return NavigationBakan1();
             } else {
               return Center(
                 child: CircularProgressIndicator(),

@@ -24,6 +24,7 @@ class _OtelDetailPageState extends State<OtelDetailPage> {
   Widget build(BuildContext context) {
     CollectionReference hotelsRef = _firestore.collection('hotels');
     int gottenStars = widget.otel_.rating;
+    Map<String, dynamic> _hotelData;
 
     return Scaffold(
       appBar: AppBar(
@@ -194,12 +195,28 @@ class _OtelDetailPageState extends State<OtelDetailPage> {
               child: Row(
                 children: [
                   FavoriteButton(
-                    isFavorite: false,
+                    isFavorite: widget.otel_.flag,
                     // iconDisabledColor: Colors.white,
-                    valueChanged: (_isFavorite) {
+                    valueChanged: (_isFavorite) async {
                       _isFavorite
-                          ? print('Is Favorite : $_isFavorite dogru1')
-                          : print('Is Favorite : $_isFavorite yanlıs2');
+                          ? {
+                              widget.otel_.flag = true,
+                              _hotelData = {
+                                'otelAdi': '${widget.otel_.name}',
+                                'otelCity': '${widget.otel_.city}',
+                                'otelFiyat': '${widget.otel_.price}',
+                                'otelUlke': '${widget.otel_.country}',
+                                'otelimageUrl': '${widget.otel_.imageUrl}',
+                                'rating': widget.otel_.rating,
+                              },
+                              await hotelsRef
+                                  .doc(' ${widget.otel_.name}')
+                                  .set(_hotelData),
+                            }
+                          : {
+                              widget.otel_.flag = false,
+                              hotelsRef.doc(' ${widget.otel_.name}').delete(),
+                            };
                     },
                   ),
                   // AppButtons(

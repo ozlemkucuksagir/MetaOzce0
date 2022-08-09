@@ -5,6 +5,7 @@ class Otel {
   String? price;
   String? country;
   String? city;
+  bool? flag;
 
   Otel({
     this.imageUrl,
@@ -13,5 +14,6 @@ class Otel {
     this.price,
     this.country,
     this.city,
+    this.flag,
   });
 }
