@@ -23,10 +23,6 @@ class _FavPageState extends State<FavPage> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('META OZCE'),
-        centerTitle: true,
-      ),
       body: SafeArea(
         child: Expanded(
             child: Column(

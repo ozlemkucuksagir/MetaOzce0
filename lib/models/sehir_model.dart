@@ -25,15 +25,27 @@ List<Otel> antalya = [
     country: 'Türkiye',
     city: 'Antalya',
     flag: false,
+    aciklama: 'Mevkii:  Kemerağzı.\n'
+        'Denize Mesafe: 750 mt.\n'
+        'Antalya Merkezine Mesafe:  27 km.\n'
+        'Antalya Otogara Mesafe:  30 km.\n'
+        'Antalya Havaalanına Mesafe:  11 km.\n'
+        'Belek Merkezine Mesafe:  12 km.\n',
   ),
   Otel(
     imageUrl: 'assets/images/oteller/antalya2.png',
-    name: 'Aotel2',
+    name: 'Nirvana Dolce Vita',
     rating: 2,
     price: '230 TL',
     country: 'Türkiye',
     city: 'Antalya',
     flag: false,
+    aciklama: 'Mevkii:  Kemerağzı.\n'
+        'Denize Mesafe: 750 mt.\n'
+        'Antalya Merkezine Mesafe:  27 km.\n'
+        'Antalya Otogara Mesafe:  30 km.\n'
+        'Antalya Havaalanına Mesafe:  11 km.\n'
+        'Belek Merkezine Mesafe:  12 km.\n',
   ),
   Otel(
     imageUrl: 'assets/images/oteller/antalya3.png',
@@ -43,6 +55,12 @@ List<Otel> antalya = [
     country: 'Türkiye',
     city: 'Antalya',
     flag: false,
+    aciklama: 'Mevkii:  Kemerağzı.\n'
+        'Denize Mesafe: 750 mt.\n'
+        'Antalya Merkezine Mesafe:  27 km.\n'
+        'Antalya Otogara Mesafe:  30 km.\n'
+        'Antalya Havaalanına Mesafe:  11 km.\n'
+        'Belek Merkezine Mesafe:  12 km.\n',
   ),
 ];
 List<Otel> mugla = [
@@ -54,6 +72,12 @@ List<Otel> mugla = [
     country: 'Türkiye',
     city: 'Muğla',
     flag: false,
+    aciklama: 'Mevkii:  Kemerağzı.\n'
+        'Denize Mesafe: 750 mt.\n'
+        'Antalya Merkezine Mesafe:  27 km.\n'
+        'Antalya Otogara Mesafe:  30 km.\n'
+        'Antalya Havaalanına Mesafe:  11 km.\n'
+        'Belek Merkezine Mesafe:  12 km.\n',
   ),
   Otel(
     imageUrl: 'assets/images/oteller/mugla2.png',
@@ -63,6 +87,12 @@ List<Otel> mugla = [
     country: 'Türkiye',
     city: 'Muğla',
     flag: false,
+    aciklama: 'Mevkii:  Kemerağzı.\n'
+        'Denize Mesafe: 750 mt.\n'
+        'Antalya Merkezine Mesafe:  27 km.\n'
+        'Antalya Otogara Mesafe:  30 km.\n'
+        'Antalya Havaalanına Mesafe:  11 km.\n'
+        'Belek Merkezine Mesafe:  12 km.\n',
   ),
   Otel(
     imageUrl: 'assets/images/oteller/mugla3.png',
@@ -72,6 +102,12 @@ List<Otel> mugla = [
     country: 'Türkiye',
     city: 'Muğla',
     flag: false,
+    aciklama: 'Mevkii:  Kemerağzı.\n'
+        'Denize Mesafe: 750 mt.\n'
+        'Antalya Merkezine Mesafe:  27 km.\n'
+        'Antalya Otogara Mesafe:  30 km.\n'
+        'Antalya Havaalanına Mesafe:  11 km.\n'
+        'Belek Merkezine Mesafe:  12 km.\n',
   ),
 ];
 List<Otel> izmir = [
@@ -83,6 +119,12 @@ List<Otel> izmir = [
     country: 'Türkiye',
     city: 'İzmir',
     flag: false,
+    aciklama: 'Mevkii:  Kemerağzı.\n'
+        'Denize Mesafe: 750 mt.\n'
+        'Antalya Merkezine Mesafe:  27 km.\n'
+        'Antalya Otogara Mesafe:  30 km.\n'
+        'Antalya Havaalanına Mesafe:  11 km.\n'
+        'Belek Merkezine Mesafe:  12 km.\n',
   ),
   Otel(
     imageUrl: 'assets/images/oteller/izmir1.png',
@@ -92,6 +134,12 @@ List<Otel> izmir = [
     country: 'Türkiye',
     city: 'İzmir',
     flag: false,
+    aciklama: 'Mevkii:  Kemerağzı.\n'
+        'Denize Mesafe: 750 mt.\n'
+        'Antalya Merkezine Mesafe:  27 km.\n'
+        'Antalya Otogara Mesafe:  30 km.\n'
+        'Antalya Havaalanına Mesafe:  11 km.\n'
+        'Belek Merkezine Mesafe:  12 km.\n',
   ),
   Otel(
     imageUrl: 'assets/images/oteller/izmir1.png',
@@ -101,6 +149,12 @@ List<Otel> izmir = [
     country: 'Türkiye',
     city: 'İzmir',
     flag: false,
+    aciklama: 'Mevkii:  Kemerağzı.\n'
+        'Denize Mesafe: 750 mt.\n'
+        'Antalya Merkezine Mesafe:  27 km.\n'
+        'Antalya Otogara Mesafe:  30 km.\n'
+        'Antalya Havaalanına Mesafe:  11 km.\n'
+        'Belek Merkezine Mesafe:  12 km.\n',
   ),
 ];
 
@@ -114,7 +168,7 @@ List<Sehir_olustur> sehirler = [
   ),
   Sehir_olustur(
     //imageUrl: 'assets/images/antalya.jfif',
-    city: 'Mugla',
+    city: 'Muğla',
     country: 'Türkiye',
     //description: '',
     oteller: mugla,

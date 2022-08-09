@@ -27,11 +27,12 @@ class _NavigationBakan1State extends State<NavigationBakan1> {
       appBar: AppBar(
         title: const Text('META OZCE'),
         centerTitle: true,
+        backgroundColor: Theme.of(context).primaryColor,
       ),
       body: screens[widget.index],
       bottomNavigationBar: CurvedNavigationBar(
           index: widget.index,
-          backgroundColor: Colors.indigo.shade100,
+          backgroundColor: Color(0XFFbac9e1),
           color: Theme.of(context).primaryColor,
           animationDuration: const Duration(milliseconds: 300),
           onTap: (index) => setState(() {
