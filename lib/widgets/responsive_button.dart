@@ -22,7 +22,7 @@ class ResponsiveButton extends StatelessWidget {
             isResponsive == true
                 ? Container(
                     margin: const EdgeInsets.only(left: 20),
-                    child: Text(
+                    child: const Text(
                       'ÖDEME',
                       style: TextStyle(
                         fontSize: 25,
@@ -33,7 +33,7 @@ class ResponsiveButton extends StatelessWidget {
                 : Container(),
             Container(
               margin: const EdgeInsets.only(right: 20),
-              child: Icon(
+              child: const Icon(
                 Icons.keyboard_double_arrow_right,
                 size: 50,
                 color: Colors.white,

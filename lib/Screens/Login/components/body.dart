@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               " ",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -46,7 +46,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return QrCodeScreen();
+                      return const QrCodeScreen();
                     },
                   ),
                 );
@@ -57,7 +57,7 @@ class Body extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
+              children: const <Widget>[
                 Text(
                   "Parolayı unuttuysanız resepsiyondan alabilirsiniz.",
                   style: TextStyle(color: kPrimaryColor, fontSize: 13),
@@ -69,7 +69,7 @@ class Body extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
+              children: const <Widget>[
                 Text(
                   "(RESEPSİYONU ARA)",
                   style: TextStyle(

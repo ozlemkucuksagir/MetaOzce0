@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "537936332520",
+    "project_id": "metaozcedatabasefirebaselast",
+    "storage_bucket": "metaozcedatabasefirebaselast.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537936332520:android:3e33759c6e48b29ea06b5d",
+        "android_client_info": {
+          "package_name": "com.example.meta_ozce_0"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537936332520-joq8rh1pv6sh6tb17ibcep52rhu80ji0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaS4S9p0cU15u25Tl6mvU3U1W9k59Nmu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537936332520-joq8rh1pv6sh6tb17ibcep52rhu80ji0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

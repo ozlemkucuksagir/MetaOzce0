@@ -12,7 +12,7 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   void getCode() {
     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-      return LoginScreen();
+      return const LoginScreen();
     }));
   }
 
@@ -25,7 +25,7 @@ class _BodyState extends State<Body> {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [Colors.blue, Colors.blueGrey])),
-      child: Center(
+      child: const Center(
           child: SpinKitCubeGrid(
         color: Colors.white,
         size: 150,

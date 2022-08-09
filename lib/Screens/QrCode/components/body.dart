@@ -33,19 +33,19 @@ class _HomeState extends State<Home> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               '  QR / Barcode Scanner',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 25,
                   color: kPrimaryColor),
             ),
-            SizedBox(height: 100),
+            const SizedBox(height: 100),
             Image.asset(
               urlImage,
               height: 300,
             ),
-            SizedBox(height: 100),
+            const SizedBox(height: 100),
             RoundedButton(
               text: "QR taratmak için basın",
               press: () {

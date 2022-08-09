@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:meta_ozce_0/Style/Style.dart';
 import 'package:meta_ozce_0/models/otel_model.dart';
@@ -8,7 +10,7 @@ import 'package:meta_ozce_0/widgets/responsive_button.dart';
 class OtelDetailPage extends StatefulWidget {
   final Otel otel_;
 
-  OtelDetailPage({required this.otel_});
+  const OtelDetailPage({required this.otel_});
 
   @override
   _OtelDetailPageState createState() => _OtelDetailPageState();
@@ -17,11 +19,18 @@ class OtelDetailPage extends StatefulWidget {
 class _OtelDetailPageState extends State<OtelDetailPage> {
   int selectedIndex = -1;
   @override
+  final _firestore = FirebaseFirestore.instance;
+
   Widget build(BuildContext context) {
+    CollectionReference hotelsRef = _firestore.collection('hotels');
     int gottenStars = widget.otel_.rating;
 
     return Scaffold(
-      body: Container(
+      appBar: AppBar(
+        title: Text('META OZCE'),
+        centerTitle: true,
+      ),
+      body: SizedBox(
         width: double.maxFinite,
         height: double.maxFinite,
         child: Stack(
@@ -33,7 +42,7 @@ class _OtelDetailPageState extends State<OtelDetailPage> {
                 children: [
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.menu),
+                    icon: const Icon(Icons.menu),
                   ),
                 ],
               ),
@@ -57,7 +66,7 @@ class _OtelDetailPageState extends State<OtelDetailPage> {
                 padding: const EdgeInsets.only(left: 20, right: 20, top: 30),
                 width: MediaQuery.of(context).size.width,
                 height: 550,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30),
@@ -80,12 +89,12 @@ class _OtelDetailPageState extends State<OtelDetailPage> {
                         )
                       ],
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Row(
                       children: [
                         Icon(Icons.location_on,
                             color: Theme.of(context).primaryColor),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         AppText(
@@ -93,7 +102,7 @@ class _OtelDetailPageState extends State<OtelDetailPage> {
                                 '${widget.otel_.country}, ${widget.otel_.city}')
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -111,24 +120,24 @@ class _OtelDetailPageState extends State<OtelDetailPage> {
                             },
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         AppText(text: '(${widget.otel_.rating}.0)'),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
                     AppLargeText(
                         text: 'Kişiler',
                         color: Colors.black.withOpacity(0.8),
                         size: 20),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     AppText(text: 'Grubunuzdaki kişi sayısı'),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Wrap(
@@ -158,7 +167,7 @@ class _OtelDetailPageState extends State<OtelDetailPage> {
                         );
                       }),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     AppLargeText(
@@ -166,7 +175,7 @@ class _OtelDetailPageState extends State<OtelDetailPage> {
                       color: Colors.black.withOpacity(0.8),
                       size: 20,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     AppText(
@@ -184,15 +193,24 @@ class _OtelDetailPageState extends State<OtelDetailPage> {
               right: 20,
               child: Row(
                 children: [
-                  AppButtons(
-                    size: 60,
-                    color: Colors.black54,
-                    backgroundColor: Colors.white,
-                    borderColor: Colors.black54,
-                    isIcon: true,
-                    icon: Icons.favorite_border,
+                  FavoriteButton(
+                    isFavorite: false,
+                    // iconDisabledColor: Colors.white,
+                    valueChanged: (_isFavorite) {
+                      _isFavorite
+                          ? print('Is Favorite : $_isFavorite dogru1')
+                          : print('Is Favorite : $_isFavorite yanlıs2');
+                    },
                   ),
-                  SizedBox(
+                  // AppButtons(
+                  //   size: 60,
+                  //   color: Colors.black54,
+                  //   backgroundColor: Colors.white,
+                  //   borderColor: Colors.black54,
+                  //   isIcon: true,
+                  //   icon: Icons.favorite_border,
+                  // ),
+                  const SizedBox(
                     width: 60,
                   ),
                   ResponsiveButton(

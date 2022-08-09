@@ -1,24 +1,44 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:meta_ozce_0/Screens/Otel_Bakan/favoriler_page.dart';
+import 'package:meta_ozce_0/Screens/Otel_Konaklayan/feedback_page.dart';
 import 'package:meta_ozce_0/Screens/Welcome/welcome_screen.dart';
 import 'package:meta_ozce_0/constants.dart';
+import 'package:meta_ozce_0/widgets/navigation_bakan1.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  final Future<FirebaseApp> _initialization = Firebase.initializeApp();
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Meta OzCe',
-      theme: ThemeData(
-        primaryColor: kPrimaryColor,
-      ),
-      home: WelcomeScreen(),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Meta OzCe',
+        theme: ThemeData(
+          primaryColor: kPrimaryColor,
+        ),
+        home: FutureBuilder(
+          future: _initialization,
+          builder: (BuildContext context, AsyncSnapshot asyncSnapshot) {
+            if (asyncSnapshot.hasError) {
+              return Center(
+                child: Text('beklenmeyen hata'),
+              );
+            } else if (asyncSnapshot.hasData) {
+              return FavPage();
+            } else {
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+          },
+        ));
   }
 }

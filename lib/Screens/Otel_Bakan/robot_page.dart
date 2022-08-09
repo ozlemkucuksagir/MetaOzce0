@@ -7,7 +7,7 @@ class RobotPageBakan extends StatefulWidget {
 }
 
 class _RobotPageBakanState extends State<RobotPageBakan> {
-  int _selectedIndex = 0;
+  final int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Expanded(
@@ -28,7 +28,7 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                       height: 80,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(300),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           fit: BoxFit.fitHeight,
                           image: AssetImage(
                             'assets/images/rob1.png',
@@ -39,7 +39,7 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                         boxShadow: [
                           BoxShadow(
                             color: Colors.blue.shade100,
-                            offset: Offset(0.0, 2.0),
+                            offset: const Offset(0.0, 2.0),
                             blurRadius: 6.0,
                           ),
                         ],
@@ -49,7 +49,7 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                 ]),
               ),
             ),
-            Text(
+            const Text(
               'Size nasıl yardımcı olabilirim?',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -57,7 +57,7 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                   fontSize: 20,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Expanded(
@@ -67,7 +67,7 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                           colors: <Color>[
                             Color(0xFF0D47A1),
                             Color(0xFF1976D2),
@@ -78,16 +78,16 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                     ),
                   ),
                   TextButton(
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         'Otellere bakmak istiyorum.',
                         style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
                     ),
                     style: TextButton.styleFrom(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       primary: Colors.white,
-                      textStyle: TextStyle(fontSize: 20),
+                      textStyle: const TextStyle(fontSize: 20),
                     ),
                     onPressed: () => Navigator.push(
                       context,
@@ -100,7 +100,7 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                 ]),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Expanded(
@@ -110,7 +110,7 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                           colors: <Color>[
                             Color(0xFF0D47A1),
                             Color(0xFF1976D2),
@@ -121,16 +121,16 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                     ),
                   ),
                   TextButton(
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         'Favorilere eklediğim otelleri görmek istiyorum.',
                         style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
                     ),
                     style: TextButton.styleFrom(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       primary: Colors.white,
-                      textStyle: TextStyle(fontSize: 20),
+                      textStyle: const TextStyle(fontSize: 20),
                     ),
                     onPressed: () => Navigator.push(
                       context,
@@ -143,7 +143,7 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                 ]),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Expanded(
@@ -153,7 +153,7 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                           colors: <Color>[
                             Color(0xFF0D47A1),
                             Color(0xFF1976D2),
@@ -164,16 +164,16 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                     ),
                   ),
                   TextButton(
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         'Profilime gitmek istiyorum.',
                         style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
                     ),
                     style: TextButton.styleFrom(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       primary: Colors.white,
-                      textStyle: TextStyle(fontSize: 20),
+                      textStyle: const TextStyle(fontSize: 20),
                     ),
                     onPressed: () => Navigator.push(
                       context,
@@ -186,10 +186,10 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                 ]),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
               child: TextField(
                 decoration: InputDecoration(
@@ -198,7 +198,7 @@ class _RobotPageBakanState extends State<RobotPageBakan> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
           ],

@@ -21,13 +21,13 @@ class _FirstState extends State<First> {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(35),
+                padding: const EdgeInsets.all(35),
                 child: Container(
                   decoration: BoxDecoration(border: Border.all()),
                   child: TextFormField(
                     controller: title,
                     textAlign: TextAlign.center,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: ' Code ',
                     ),
                   ),
@@ -40,7 +40,7 @@ class _FirstState extends State<First> {
                     code = title.text;
                   });
                 },
-                child: Text(
+                child: const Text(
                   "Create",
                   style: TextStyle(
                     color: Colors.white,
@@ -49,12 +49,12 @@ class _FirstState extends State<First> {
                 ),
               ),
               code == ''
-                  ? Text('')
+                  ? const Text('')
                   : BarcodeWidget(
                       barcode: Barcode.qrCode(
                         errorCorrectLevel: BarcodeQRCorrectionLevel.high,
                       ),
-                      data: '$code',
+                      data: code,
                       width: 200,
                       height: 200,
                     ),

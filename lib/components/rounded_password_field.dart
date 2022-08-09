@@ -14,7 +14,7 @@ class RoundedPasswordField extends StatelessWidget {
         child: TextField(
       obscureText: true,
       onChanged: onChanged,
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
           hintText: "Parola",
           icon: Icon(
             Icons.lock,

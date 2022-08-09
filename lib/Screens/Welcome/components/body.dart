@@ -12,14 +12,14 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     //provide us total hight and width of our screen
 
-    final urlImage = "assets/images/welcome.png";
+    const urlImage = "assets/images/welcome.png";
     return Background(
       child: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SizedBox(height: size.height * 0.03),
-            Text(
+            const Text(
               "METAOZCE'YE HOŞ GELDİNİZ",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -40,7 +40,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return QrCodeScreen();
+                      return const QrCodeScreen();
                     },
                   ),
                 );

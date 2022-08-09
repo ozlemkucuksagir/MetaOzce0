@@ -20,13 +20,13 @@ class Sehir extends StatelessWidget {
     return Column(
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.0),
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                '${sehirler[0].city.toString().toUpperCase()}',
-                style: TextStyle(
+                sehirler[0].city.toString().toUpperCase(),
+                style: const TextStyle(
                   fontSize: 22.0,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1.5,
@@ -47,11 +47,11 @@ class Sehir extends StatelessWidget {
             ],
           ),
         ),
-        Container(
+        const SizedBox(
           width: 500,
           child: Divider(height: 15, color: Colors.black),
         ),
-        Container(
+        SizedBox(
           height: 300.0,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -69,7 +69,7 @@ class Sehir extends StatelessWidget {
                   ),
                 ),
                 child: Container(
-                  margin: EdgeInsets.all(10.0),
+                  margin: const EdgeInsets.all(10.0),
                   width: 210.0,
                   child: Stack(
                     alignment: Alignment.topCenter,
@@ -84,7 +84,7 @@ class Sehir extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(10.0),
+                            padding: const EdgeInsets.all(10.0),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -94,7 +94,7 @@ class Sehir extends StatelessWidget {
                                 Text(
                                   ////////
                                   '${sehir_.oteller![index].name}',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.w600,
                                     letterSpacing: 1.2,
@@ -109,7 +109,7 @@ class Sehir extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black26,
                               offset: Offset(0.0, 2.0),
@@ -140,7 +140,7 @@ class Sehir extends StatelessWidget {
                                 children: <Widget>[
                                   Text(
                                     '${sehirler[0].oteller?[index].name}',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 24.0,
                                       fontWeight: FontWeight.w600,
@@ -149,15 +149,15 @@ class Sehir extends StatelessWidget {
                                   ),
                                   Row(
                                     children: <Widget>[
-                                      Icon(
+                                      const Icon(
                                         FontAwesomeIcons.locationArrow,
                                         size: 10.0,
                                         color: Colors.white,
                                       ),
-                                      SizedBox(width: 5.0),
+                                      const SizedBox(width: 5.0),
                                       Text(
                                         '${sehir_.country}',
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           color: Colors.white,
                                         ),
                                       ),
@@ -177,13 +177,13 @@ class Sehir extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                '${sehirler[1].city.toString().toUpperCase()}',
-                style: TextStyle(
+                sehirler[1].city.toString().toUpperCase(),
+                style: const TextStyle(
                   fontSize: 22.0,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1.5,
@@ -204,11 +204,11 @@ class Sehir extends StatelessWidget {
             ],
           ),
         ),
-        Container(
+        const SizedBox(
           width: 500,
           child: Divider(height: 15, color: Colors.black45),
         ),
-        Container(
+        SizedBox(
           height: 300.0,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -227,7 +227,7 @@ class Sehir extends StatelessWidget {
                   ),
                 ),
                 child: Container(
-                  margin: EdgeInsets.all(10.0),
+                  margin: const EdgeInsets.all(10.0),
                   width: 210.0,
                   child: Stack(
                     alignment: Alignment.topCenter,
@@ -242,7 +242,7 @@ class Sehir extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(10.0),
+                            padding: const EdgeInsets.all(10.0),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -251,7 +251,7 @@ class Sehir extends StatelessWidget {
                                     sehirler[1].oteller![index].rating),
                                 Text(
                                   '${sehirler[1].oteller?[index].name}',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.w600,
                                     letterSpacing: 1.2,
@@ -266,7 +266,7 @@ class Sehir extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black26,
                               offset: Offset(0.0, 2.0),
@@ -296,7 +296,7 @@ class Sehir extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Row(
-                                    children: <Widget>[
+                                    children: const <Widget>[
                                       Icon(
                                         FontAwesomeIcons.locationArrow,
                                         size: 10.0,
@@ -319,13 +319,13 @@ class Sehir extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                '${sehirler[2].city.toString().toUpperCase()}',
-                style: TextStyle(
+                sehirler[2].city.toString().toUpperCase(),
+                style: const TextStyle(
                   fontSize: 22.0,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1.5,
@@ -346,11 +346,11 @@ class Sehir extends StatelessWidget {
             ],
           ),
         ),
-        Container(
+        const SizedBox(
           width: 500,
           child: Divider(height: 15, color: Colors.black45),
         ),
-        Container(
+        SizedBox(
           height: 300.0,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -368,7 +368,7 @@ class Sehir extends StatelessWidget {
                   ),
                 ),
                 child: Container(
-                  margin: EdgeInsets.all(10.0),
+                  margin: const EdgeInsets.all(10.0),
                   width: 210.0,
                   child: Stack(
                     alignment: Alignment.topCenter,
@@ -383,7 +383,7 @@ class Sehir extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(10.0),
+                            padding: const EdgeInsets.all(10.0),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -392,7 +392,7 @@ class Sehir extends StatelessWidget {
                                     sehirler[2].oteller![index].rating),
                                 Text(
                                   '${sehir_.oteller![index].name}',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.w600,
                                     letterSpacing: 1.2,
@@ -407,7 +407,7 @@ class Sehir extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20.0),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black26,
                               offset: Offset(0.0, 2.0),
@@ -438,7 +438,7 @@ class Sehir extends StatelessWidget {
                                 children: <Widget>[
                                   Text(
                                     '${sehirler[2].oteller?[index].name}',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 24.0,
                                       fontWeight: FontWeight.w600,
@@ -447,15 +447,15 @@ class Sehir extends StatelessWidget {
                                   ),
                                   Row(
                                     children: <Widget>[
-                                      Icon(
+                                      const Icon(
                                         FontAwesomeIcons.locationArrow,
                                         size: 10.0,
                                         color: Colors.white,
                                       ),
-                                      SizedBox(width: 5.0),
+                                      const SizedBox(width: 5.0),
                                       Text(
                                         '${sehir_.country}',
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           color: Colors.white,
                                         ),
                                       ),

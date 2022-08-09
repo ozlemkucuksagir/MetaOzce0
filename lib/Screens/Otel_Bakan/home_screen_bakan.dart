@@ -8,9 +8,9 @@ class HomeScreenBakan extends StatefulWidget {
 }
 
 class _HomeScreenBakanState extends State<HomeScreenBakan> {
-  int _selectedIndex = 0;
-  int _currentTab = 0;
-  List<IconData> _icons = [
+  final int _selectedIndex = 0;
+  final int _currentTab = 0;
+  final List<IconData> _icons = [
     FontAwesomeIcons.plane,
     FontAwesomeIcons.bed,
     FontAwesomeIcons.walking,
@@ -22,7 +22,7 @@ class _HomeScreenBakanState extends State<HomeScreenBakan> {
     return Scaffold(
       body: SafeArea(
         child: ListView(
-          padding: EdgeInsets.symmetric(vertical: 30.0),
+          padding: const EdgeInsets.symmetric(vertical: 30.0),
           children: <Widget>[
             // Row(
             //   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -35,7 +35,7 @@ class _HomeScreenBakanState extends State<HomeScreenBakan> {
             //       .toList(),
             // ),
 
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 20.0, right: 20.0),
               child: Text(
                 'Sana en uygun oteli keşfet!',
@@ -45,10 +45,10 @@ class _HomeScreenBakanState extends State<HomeScreenBakan> {
                 ),
               ),
             ),
-            SizedBox(height: 20.0),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             Sehir(),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
           ],
         ),
       ),

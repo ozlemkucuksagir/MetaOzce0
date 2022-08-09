@@ -25,7 +25,7 @@ class _NavigationBakan1State extends State<NavigationBakan1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('META OZCE'),
+        title: const Text('META OZCE'),
         centerTitle: true,
       ),
       body: screens[widget.index],
@@ -33,11 +33,11 @@ class _NavigationBakan1State extends State<NavigationBakan1> {
           index: widget.index,
           backgroundColor: Colors.indigo.shade100,
           color: Theme.of(context).primaryColor,
-          animationDuration: Duration(milliseconds: 300),
+          animationDuration: const Duration(milliseconds: 300),
           onTap: (index) => setState(() {
                 widget.index = index;
               }),
-          items: [
+          items: const [
             Icon(
               Icons.home,
               color: Colors.white,

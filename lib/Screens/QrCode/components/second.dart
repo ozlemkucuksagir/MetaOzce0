@@ -41,7 +41,7 @@ class _SecondState extends State<Second> {
             });
           }
         },
-        child: Icon(Icons.camera),
+        child: const Icon(Icons.camera),
       ),
       body: camState
           ? Center(
@@ -52,7 +52,7 @@ class _SecondState extends State<Second> {
                   onError: (context, error) => Text(
                     error.toString(),
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.red),
+                    style: const TextStyle(color: Colors.red),
                   ),
                   qrCodeCallback: (code) {
                     qrCallback(code);
@@ -67,11 +67,11 @@ class _SecondState extends State<Second> {
                   TextButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => LoadingScreen()));
+                          builder: (context) => const LoadingScreen()));
                     },
                     child: Text(
                       "Code :" + _qrInfo!,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 25,
                       ),
                     ),
