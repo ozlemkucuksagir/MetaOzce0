@@ -140,7 +140,7 @@ class _FavPageState extends State<FavPage> {
                                                     Text(
                                                         '${listofDocumentSnap[index]['otelAdi']}',
                                                         style: TextStyle(
-                                                            fontSize: 20)),
+                                                            fontSize: 11)),
                                                     SizedBox(
                                                       height: 5,
                                                     ),

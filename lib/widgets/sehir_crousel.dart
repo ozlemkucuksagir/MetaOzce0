@@ -38,7 +38,7 @@ class Sehir extends StatelessWidget {
                   'See All >',
                   style: TextStyle(
                     color: Theme.of(context).textSelectionTheme.selectionColor,
-                    fontSize: 16.0,
+                    fontSize: 10.0,
                     fontWeight: FontWeight.w400,
                     letterSpacing: 1.0,
                   ),
@@ -91,13 +91,15 @@ class Sehir extends StatelessWidget {
                               children: <Widget>[
                                 _buildRatingStars(
                                     sehirler[0].oteller![index].rating),
+                                SizedBox(
+                                  height: 10,
+                                ),
                                 Text(
                                   ////////
                                   '${sehir_.oteller![index].name}',
                                   style: const TextStyle(
-                                    fontSize: 22.0,
-                                    fontWeight: FontWeight.w600,
-                                    letterSpacing: 1.2,
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                               ],
@@ -142,9 +144,8 @@ class Sehir extends StatelessWidget {
                                     '${sehirler[0].oteller?[index].name}',
                                     style: const TextStyle(
                                       color: Colors.white,
-                                      fontSize: 24.0,
-                                      fontWeight: FontWeight.w600,
-                                      letterSpacing: 1.2,
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.w500,
                                     ),
                                   ),
                                   Row(
@@ -195,7 +196,7 @@ class Sehir extends StatelessWidget {
                   'See All >',
                   style: TextStyle(
                     color: Theme.of(context).textSelectionTheme.selectionColor,
-                    fontSize: 16.0,
+                    fontSize: 10.0,
                     fontWeight: FontWeight.w400,
                     letterSpacing: 1.0,
                   ),
@@ -249,12 +250,14 @@ class Sehir extends StatelessWidget {
                               children: <Widget>[
                                 _buildRatingStars(
                                     sehirler[1].oteller![index].rating),
+                                SizedBox(
+                                  height: 10,
+                                ),
                                 Text(
                                   '${sehirler[1].oteller?[index].name}',
                                   style: const TextStyle(
-                                    fontSize: 22.0,
-                                    fontWeight: FontWeight.w600,
-                                    letterSpacing: 1.2,
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                               ],
@@ -295,14 +298,28 @@ class Sehir extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
+                                  Text(
+                                    '${sehirler[1].oteller?[index].name}',
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
                                   Row(
-                                    children: const <Widget>[
+                                    children: <Widget>[
                                       Icon(
                                         FontAwesomeIcons.locationArrow,
                                         size: 10.0,
                                         color: Colors.white,
                                       ),
                                       SizedBox(width: 5.0),
+                                      Text(
+                                        '${sehir_.country}',
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ],
@@ -337,7 +354,7 @@ class Sehir extends StatelessWidget {
                   'See All >',
                   style: TextStyle(
                     color: Theme.of(context).textSelectionTheme.selectionColor,
-                    fontSize: 16.0,
+                    fontSize: 10.0,
                     fontWeight: FontWeight.w400,
                     letterSpacing: 1.0,
                   ),
@@ -390,12 +407,14 @@ class Sehir extends StatelessWidget {
                               children: <Widget>[
                                 _buildRatingStars(
                                     sehirler[2].oteller![index].rating),
+                                SizedBox(
+                                  height: 10,
+                                ),
                                 Text(
                                   '${sehir_.oteller![index].name}',
                                   style: const TextStyle(
-                                    fontSize: 22.0,
-                                    fontWeight: FontWeight.w600,
-                                    letterSpacing: 1.2,
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                               ],
@@ -440,9 +459,8 @@ class Sehir extends StatelessWidget {
                                     '${sehirler[2].oteller?[index].name}',
                                     style: const TextStyle(
                                       color: Colors.white,
-                                      fontSize: 24.0,
-                                      fontWeight: FontWeight.w600,
-                                      letterSpacing: 1.2,
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.w500,
                                     ),
                                   ),
                                   Row(

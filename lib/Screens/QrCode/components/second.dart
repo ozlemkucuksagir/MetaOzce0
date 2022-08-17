@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_qr_bar_scanner/qr_bar_scanner_camera.dart';
 import 'package:meta_ozce_0/Screens/Loading/loading_screen.dart';
+import 'package:meta_ozce_0/Screens/Login/login_screen.dart';
 
 class Second extends StatefulWidget {
   @override
@@ -67,7 +68,7 @@ class _SecondState extends State<Second> {
                   TextButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const LoadingScreen()));
+                          builder: (context) => const LoginScreen()));
                     },
                     child: Text(
                       "Code :" + _qrInfo!,

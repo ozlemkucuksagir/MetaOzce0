@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:meta_ozce_0/Screens/Login/components/background.dart';
+import 'package:meta_ozce_0/Screens/Otel_Konaklayan/home_screen_konak.dart';
 import 'package:meta_ozce_0/Screens/QrCode/qrCode_screen.dart';
 import 'package:meta_ozce_0/components/rounded_button.dart';
 import 'package:meta_ozce_0/constants.dart';
+import 'package:meta_ozce_0/widgets/navigation_konak.dart';
 
 import '../../../components/rounded_input_field.dart';
 import '../../../components/rounded_password_field.dart';
@@ -21,13 +23,7 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              " ",
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: kPrimaryColor,
-                  fontSize: 15),
-            ),
+            SizedBox(height: 20),
             Image.asset(
               urlImage,
               height: size.height * 0.38,
@@ -46,14 +42,11 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return const QrCodeScreen();
+                      return NavigationKonak();
                     },
                   ),
                 );
               },
-            ),
-            SizedBox(
-              height: size.height * 0.008,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

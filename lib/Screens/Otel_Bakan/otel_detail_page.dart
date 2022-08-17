@@ -40,13 +40,15 @@ class _OtelDetailPageState extends State<OtelDetailPage> {
               Positioned(
                 left: 0,
                 right: 0,
-                child: Container(
-                  width: double.maxFinite,
-                  height: 240, //bunu expanded yapsam iyi olur
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('${widget.otel_.imageUrl}'),
-                        fit: BoxFit.cover),
+                child: Expanded(
+                  child: Container(
+                    width: double.maxFinite,
+                    height: 240, //bunu expanded yapsam iyi olur
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('${widget.otel_.imageUrl}'),
+                          fit: BoxFit.cover),
+                    ),
                   ),
                 ),
               ),
@@ -55,7 +57,7 @@ class _OtelDetailPageState extends State<OtelDetailPage> {
                 child: Container(
                   padding: const EdgeInsets.only(left: 20, right: 20, top: 30),
                   width: MediaQuery.of(context).size.width,
-                  height: 550,
+                  height: 790,
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -75,7 +77,7 @@ class _OtelDetailPageState extends State<OtelDetailPage> {
                           ),
                           AppColorText(
                             text: '${widget.otel_.price}',
-                            size: 25,
+                            size: 15,
                           )
                         ],
                       ),

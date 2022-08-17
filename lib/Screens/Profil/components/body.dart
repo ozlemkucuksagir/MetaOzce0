@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:meta_ozce_0/Screens/Otel_Konaklayan/feedback_page.dart';
+import 'package:meta_ozce_0/Screens/Welcome/welcome_screen.dart';
+import 'package:meta_ozce_0/widgets/change_thema.dart';
 
 import 'profile_menu.dart';
 import 'profile_pic.dart';
@@ -13,31 +16,48 @@ class Body extends StatelessWidget {
           ProfilePic(),
           SizedBox(height: 20),
           ProfileMenu(
-            text: "My Account",
+            text: "Hesap",
             icon: Icon(
               Icons.person,
             ),
             press: () => {},
           ),
+          Row(
+            children: [
+              SizedBox(
+                width: 25,
+              ),
+              Text('Gece Modu',
+                  style: TextStyle(
+                    fontSize: 17,
+                  )),
+              SizedBox(
+                width: 210,
+              ),
+              ChangeThemeButtonWidget(),
+            ],
+          ),
           ProfileMenu(
-            text: "Notifications",
+            text: "Bildirimler",
             icon: Icon(Icons.notifications),
             press: () {},
           ),
           ProfileMenu(
-            text: "Settings",
+            text: "Ayarlar",
             icon: Icon(Icons.settings),
             press: () {},
           ),
           ProfileMenu(
-            text: "Feedbacks",
+            text: "Geri Dönüş",
             icon: Icon(Icons.feedback),
-            press: () {},
+            press: () => Navigator.push(
+                context, MaterialPageRoute(builder: (context) => MyWidget())),
           ),
           ProfileMenu(
-            text: "Log Out",
+            text: "Çıkış Yap",
             icon: Icon(Icons.logout),
-            press: () {},
+            press: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => WelcomeScreen())),
           ),
         ],
       ),
